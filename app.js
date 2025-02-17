@@ -4,17 +4,15 @@ function sortear(){
     let ate = parseInt(document.getElementById("ate").value);
 
     let numero;
-    alert(numero);
-
     let sorteados = [];
 
     for (let i = 0; i < quantidade; i++) {
         numero = numeroAleatorio(de, ate);
         sorteados.push(numero);
-
-        alert(sorteados);
     }
+
     let resultado = document.getElementById('resultado');
+    resultado.innerHTML = `<label class="texto_paragrafo">Números sorteados: ${sorteados}</label>` 
 }
 
 function numeroAleatorio(min, max) {
